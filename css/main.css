@@ -1,0 +1,127 @@
+/* Styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #2b2d42;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Section introduction */
+.intro p {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Section détails */
+.details {
+    margin-top: 30px;
+}
+
+.details h2 {
+    font-size: 1.8em;
+    color: #2b2d42;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.details ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.details li {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Pied de page */
+footer p {
+    font-size: 1.2em;
+    color: #2b2d42;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Animation fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Appliquer l'animation sur les sections */
+.intro p, .details h2, .details li, footer p {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Délai pour chaque section afin que le texte apparaisse progressivement */
+.intro p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+.intro p:nth-child(2) {
+    animation-delay: 1s;
+}
+.details h2 {
+    animation-delay: 1.5s;
+}
+.details li:nth-child(1) {
+    animation-delay: 2s;
+}
+.details li:nth-child(2) {
+    animation-delay: 2.5s;
+}
+.details li:nth-child(3) {
+    animation-delay: 3s;
+}
+.details li:nth-child(4) {
+    animation-delay: 3.5s;
+}
+.details li:nth-child(5) {
+    animation-delay: 4s;
+}
+footer p {
+    animation-delay: 4.5s;
+}
+
+/* Responsiveness pour mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+
+    header h1, .details h2 {
+        font-size: 1.7em;
+    }
+
+    .intro p, .details li, footer p {
+        font-size: 1.1em;
+    }
+}
